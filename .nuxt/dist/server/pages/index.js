@@ -1,329 +1,15 @@
 exports.ids = [1];
 exports.modules = {
 
-/***/ 67:
+/***/ 76:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(URLSearchParams) {/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(66);
+/* WEBPACK VAR INJECTION */(function(URLSearchParams) {/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(75);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _config_env__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(69);
+/* harmony import */ var _config_env__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(78);
 /* harmony import */ var _components_UserCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -579,11 +265,15 @@ exports.modules = {
   data() {
     return {
       users: [],
+      populars: [],
+      near: [],
+      private: [],
       tapCount: 1,
       tabGenral: null,
       taps: ["Top 10 los más vistos ahora", "Famosos", "Últimos lives creados", "Cerca de ti", "One on one", "Eventos", "En vivo ahora"],
       token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDQ2ODIwODEsIm5iZiI6MTYwNDY4MjA4MSwiZXhwIjoxNjA0Njg1NjgxLCJkYXRhIjp7InVpZCI6ImR4RVVGaXNEaG4zbUF5UjhQMWc2MktiYkxSR3hrMExsc3VVSUhvemh3dk09In19.FcNLwPdCNrBcZbCfGJihaBADgr-uCI74CyFc5ithAhI",
-      urlUsers: process.env.api + "/users/getUsers"
+      urlUsers: process.env.api + "/users/getUsers",
+      urlPopulars: process.env.api + "/videoChat/getTop"
     };
   },
 
@@ -594,6 +284,11 @@ exports.modules = {
       } else {
         return ["bg-light", "text-info"];
       }
+    },
+
+    clouseFilter() {
+      const open = document.getElementById("filter");
+      open.classList.add("cont-off");
     }
 
   },
@@ -610,26 +305,42 @@ exports.modules = {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       body: urlencoded
-    };
+    }; //http://api.develop.socialtimeapp.com
+
     fetch(`${_config_env__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].enpoint}/videoChat/getHome`, requestOptions).then(response => response.json()).then(result => {
       this.users = result;
+    }).catch(error => {
+      alert(error);
+    });
+    fetch(`${_config_env__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].enpoint}/videoChat/getTop`, requestOptions).then(response => response.json()).then(result => {
+      this.populars = result.result.data;
+    }).catch(error => {
+      alert(error);
+    });
+    fetch(`${_config_env__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].enpoint}/videoChat/getNear`, requestOptions).then(response => response.json()).then(result => {
+      this.near = result.result.data;
+    }).catch(error => {
+      alert(error);
+    });
+    fetch(`${_config_env__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"].enpoint}/videoChat/getPrivates`, requestOptions).then(response => response.json()).then(result => {
+      this.private = result.result.data;
     }).catch(error => {
       alert(error);
     });
   }
 
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(65)["URLSearchParams"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(74)["URLSearchParams"]))
 
 /***/ }),
 
-/***/ 68:
+/***/ 77:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(71);
+var content = __webpack_require__(80);
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
@@ -641,7 +352,7 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 69:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -651,19 +362,19 @@ module.exports.__inject__ = function (context) {
 
 /***/ }),
 
-/***/ 70:
+/***/ 79:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(68);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(77);
 /* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_nuxt_components_dist_loader_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_style_index_0_scopod_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ 71:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -677,22 +388,22 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 72:
+/***/ 81:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=879542ea&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid"},[_vm._ssrNode("<div class=\"row\">","</div>",[_c('Navbar'),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"col-12\">","</div>",[_vm._ssrNode("<div class=\"container\">","</div>",[_vm._ssrNode("<div class=\"row\">","</div>",[_c('v-tabs',{model:{value:(_vm.tabGenral),callback:function ($$v) {_vm.tabGenral=$$v},expression:"tabGenral"}},_vm._l((_vm.taps),function(tap){return _c('v-tab',{key:tap,attrs:{"grow":""}})}),1),_vm._ssrNode(" "),_c('b-tabs',[_c('b-tab',{attrs:{"title":"Ahora","active":"","title-link-class":_vm.linkClass(0)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',{staticClass:"live"},[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[0]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.top),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[2]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,staticClass:"near mr-4",attrs:{"id":"near","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[5]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"col-lg-3",attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[6]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"vivo mr-4",attrs:{"id":"vivo","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"Populares","title-link-class":_vm.linkClass(1)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.top),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[2]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,staticClass:"near mr-4",attrs:{"id":"near","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[5]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"col-lg-3",attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[6]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"vivo mr-4",attrs:{"id":"vivo","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"Cerca","title-link-class":_vm.linkClass(3)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[2]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,staticClass:"near mr-4",attrs:{"id":"near","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[5]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"col-lg-3",attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[6]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"vivo mr-4",attrs:{"id":"vivo","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"One on One","title-link-class":_vm.linkClass(4)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[4]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.private),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[2]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,staticClass:"near mr-4",attrs:{"id":"near","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[5]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"col-lg-3",attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[6]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"vivo mr-4",attrs:{"id":"vivo","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])])],1)],2)])])],2),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"footer col-12\">","</div>",[_c('Footer')],1)],2)}
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=dd94e3da&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container-fluid"},[_vm._ssrNode("<div class=\"row\">","</div>",[_c('Navbar'),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"col-12\">","</div>",[_vm._ssrNode("<div class=\"container\">","</div>",[_vm._ssrNode("<div class=\"row\">","</div>",[_c('v-tabs',{model:{value:(_vm.tabGenral),callback:function ($$v) {_vm.tabGenral=$$v},expression:"tabGenral"}},_vm._l((_vm.taps),function(tap){return _c('v-tab',{key:tap,attrs:{"grow":""}})}),1),_vm._ssrNode(" "),_c('b-tabs',[_c('b-tab',{attrs:{"title":"Ahora","active":"","title-link-class":_vm.linkClass(0)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',{staticClass:"live"},[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[0]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.top),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[2]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.near),function(item,id){return _c('UserCard',{key:id,staticClass:"near mr-4",attrs:{"id":"near","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[5]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"col-lg-3",attrs:{"user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})]),_vm._v(" "),_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[6]))])]),_vm._v(" "),_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.users.latest),function(item,id){return _c('UserCard',{key:id,staticClass:"vivo mr-4",attrs:{"id":"vivo","user":item}})}),1),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"Populares","title-link-class":_vm.linkClass(1)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[1]))])]),_vm._v(" "),(_vm.populars)?_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.populars),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1):_vm._e(),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"Cerca","title-link-class":_vm.linkClass(3)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[3]))])]),_vm._v(" "),(_vm.near)?_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.near),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1):_vm._e(),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])]),_vm._v(" "),_c('b-tab',{attrs:{"title":"One on One","title-link-class":_vm.linkClass(4)}},[_c('div',{staticClass:"pt-3 col-12"},[_c('section',[_c('p',{staticClass:"pt-3"},[_c('b',[_vm._v(_vm._s(_vm.taps[4]))])]),_vm._v(" "),(_vm.private)?_c('div',{staticClass:"row pl-4 pr-4"},_vm._l((_vm.private),function(item,id){return _c('UserCard',{key:id,attrs:{"user":item}})}),1):_vm._e(),_vm._v(" "),_c('div',{staticClass:"showMore mt-2"},[_vm._v("\n                    Ver más\n                  ")]),_vm._v(" "),_c('hr',{staticClass:"mt-2"})])])])],1)],2)])])],2),_vm._ssrNode(" "),_vm._ssrNode("<div class=\"footer col-12\">","</div>",[_c('Footer')],1)],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=879542ea&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=dd94e3da&
 
 // EXTERNAL MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
-var lib_vue_loader_options_pagesvue_type_script_lang_js_ = __webpack_require__(67);
+var lib_vue_loader_options_pagesvue_type_script_lang_js_ = __webpack_require__(76);
 
 // CONCATENATED MODULE: ./pages/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var pagesvue_type_script_lang_js_ = (lib_vue_loader_options_pagesvue_type_script_lang_js_["a" /* default */]); 
@@ -705,7 +416,7 @@ var componentNormalizer = __webpack_require__(2);
 
 function injectStyles (context) {
   
-  var style0 = __webpack_require__(70)
+  var style0 = __webpack_require__(79)
 if (style0.__inject__) style0.__inject__(context)
 
 }

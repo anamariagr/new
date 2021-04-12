@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    
     <div class="row">
       <Navbar></Navbar>
       <div class="col-12">
@@ -150,129 +151,24 @@
                     <p class="pt-3">
                       <b>{{ taps[1] }}</b>
                     </p>
-                    <div class="row pl-4 pr-4">
+                    <div class="row pl-4 pr-4" v-if="populars">
                       <UserCard
                         class=""
                         :user="item"
-                        v-for="(item, id) in users.top"
+                        v-for="(item, id) in populars"
                         :key="id"
                       >
                       </UserCard>
-                    </div>
+
+                     </div>
                     <div class="showMore mt-2">
                       Ver más
                     </div>
 
                     <hr class="mt-2" />
                   </section>
-                  <!-- famosos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[1] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.populars"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- famosos end-->
-                  <!-- ultimos creados strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[2] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- ultimos creados end-->
-
-                  <!-- ceraca de ti strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[3] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="near"
-                        class="near mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.near"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- cerca de ti end-->
-                  <!-- eventos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[5] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class="col-lg-3"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- eventos end-->
-                  <!-- en vivo strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[6] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="vivo"
-                        class="vivo mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- en vivo end-->
+                  
+                 
                 </div>
               </b-tab>
               <!-- tap populares end  -->
@@ -283,14 +179,15 @@
                     <p class="pt-3">
                       <b>{{ taps[3] }}</b>
                     </p>
-                    <div class="row pl-4 pr-4">
+                    <div class="row pl-4 pr-4" v-if="near">
                       <UserCard
                         class=""
                         :user="item"
-                        v-for="(item, id) in users.near"
+                        v-for="(item, id) in near"
                         :key="id"
                       >
                       </UserCard>
+                      
                     </div>
                     <div class="showMore mt-2">
                       Ver más
@@ -298,114 +195,10 @@
 
                     <hr class="mt-2" />
                   </section>
-                  <!-- famosos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[1] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.populars"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- famosos end-->
-                  <!-- ultimos creados strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[2] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- ultimos creados end-->
-
-                  <!-- ceraca de ti strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[3] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="near"
-                        class="near mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.near"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- cerca de ti end-->
-                  <!-- eventos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[5] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class="col-lg-3"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- eventos end-->
-                  <!-- en vivo strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[6] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="vivo"
-                        class="vivo mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- en vivo end-->
+                 
+                  
+                 
+                 
                 </div>
               </b-tab>
               <!-- tap cerca end  -->
@@ -416,11 +209,11 @@
                     <p class="pt-3">
                       <b>{{ taps[4] }}</b>
                     </p>
-                    <div class="row pl-4 pr-4">
+                    <div class="row pl-4 pr-4" v-if="private">
                       <UserCard
                         class=""
                         :user="item"
-                        v-for="(item, id) in users.private"
+                        v-for="(item, id) in private"
                         :key="id"
                       >
                       </UserCard>
@@ -431,114 +224,7 @@
 
                     <hr class="mt-2" />
                   </section>
-                  <!-- famosos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[1] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.populars"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- famosos end-->
-                  <!-- ultimos creados strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[2] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class=""
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- ultimos creados end-->
-
-                  <!-- ceraca de ti strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[3] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="near"
-                        class="near mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.near"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- cerca de ti end-->
-                  <!-- eventos strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[5] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        class="col-lg-3"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- eventos end-->
-                  <!-- en vivo strat-->
-                  <section>
-                    <p class="pt-3">
-                      <b>{{ taps[6] }}</b>
-                    </p>
-                    <div class="row pl-4 pr-4">
-                      <UserCard
-                        id="vivo"
-                        class="vivo mr-4"
-                        :user="item"
-                        v-for="(item, id) in users.latest"
-                        :key="id"
-                      >
-                      </UserCard>
-                    </div>
-                    <div class="showMore mt-2">
-                      Ver más
-                    </div>
-
-                    <hr class="mt-2" />
-                  </section>
-                  <!-- en vivo end-->
+              
                 </div>
               </b-tab>
               <!-- tap One on one end  -->
@@ -567,6 +253,9 @@ export default {
   data() {
     return {
       users: [],
+      populars: [],
+      near: [],
+      private: [],
       tapCount: 1,
       tabGenral: null,
       taps: [
@@ -580,7 +269,8 @@ export default {
       ],
       token:
         "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDQ2ODIwODEsIm5iZiI6MTYwNDY4MjA4MSwiZXhwIjoxNjA0Njg1NjgxLCJkYXRhIjp7InVpZCI6ImR4RVVGaXNEaG4zbUF5UjhQMWc2MktiYkxSR3hrMExsc3VVSUhvemh3dk09In19.FcNLwPdCNrBcZbCfGJihaBADgr-uCI74CyFc5ithAhI",
-      urlUsers: process.env.api + "/users/getUsers"
+      urlUsers: process.env.api + "/users/getUsers",
+      urlPopulars:process.env.api +"/videoChat/getTop",
     };
   },
 
@@ -591,7 +281,11 @@ export default {
       } else {
         return ["bg-light", "text-info"];
       }
-    }
+    },
+    clouseFilter(){
+      const open = document.getElementById("filter")
+     open.classList.add("cont-off");
+    }    ,
   },
 
   created() {
@@ -610,7 +304,8 @@ export default {
       body: urlencoded
     };
 
-    fetch(`${env.enpoint}/videoChat/getHome`, requestOptions)
+    //http://api.develop.socialtimeapp.com
+      fetch(`${env.enpoint}/videoChat/getHome`, requestOptions)
       .then(response => response.json())
       .then(result => {
         this.users = result;
@@ -618,6 +313,32 @@ export default {
       .catch(error => {
         alert(error);
       });
+       fetch(`${env.enpoint}/videoChat/getTop`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        this.populars = result.result.data;
+      })
+      .catch(error => {
+        alert(error);
+      });
+        fetch(`${env.enpoint}/videoChat/getNear`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        this.near = result.result.data;
+      })
+      .catch(error => {
+        alert(error);
+      });
+        fetch(`${env.enpoint}/videoChat/getPrivates`, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        this.private = result.result.data;
+      })
+      .catch(error => {
+        alert(error);
+      });
+      
+    
   }
 };
 </script>

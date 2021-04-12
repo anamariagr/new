@@ -36,7 +36,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped>   
 .img-user {
   
     width: 90%;
