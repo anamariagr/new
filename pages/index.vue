@@ -352,6 +352,14 @@ export default {
   height: 187px;
   width: 158px;
 }
+.input {
+    border-radius: 20px;
+    padding: 5px 0;
+    margin-top: 0; 
+    box-shadow: 0 0 6px 1px hsl(0deg 0% 50% / 22%);
+    top: -15px!important;
+    position: relative;
+}
 .nav-tabs {
   border-bottom: 0px solid;
 }
