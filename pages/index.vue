@@ -20,7 +20,7 @@
                     </p>
                     <div class="row pl-4 pr-4">
                       <UserCard
-                        class=""
+                       class=""
                         :user="item"
                         v-for="(item, id) in users.top"
                         :key="id"

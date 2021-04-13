@@ -2,10 +2,12 @@
   "entry": "server.js",
   "files": {
     "pages/index.js": "pages/index.js",
+    "pages/stream.js": "pages/stream.js",
     "server.js": "server.js"
   },
   "maps": {
     "pages/index.js": "pages/index.js.map",
+    "pages/stream.js": "pages/stream.js.map",
     "server.js": "server.js.map"
   }
 }

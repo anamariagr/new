@@ -101,21 +101,27 @@
         <b-button @click="closeSibar()">
           <img src="../static/img/Menú.png" />
         </b-button>
-        <img
+        <NuxtLink to="/">  
+         <img
           class="icon-social-sibar"
           src="../static/img/SocialTime_Logo.png"
         />
+          </NuxtLink>
+        
       </div>
       <ul>
         <li class="mt-0">
-          <a class="d-flex">
-            <div class="icon">
+          
+          <NuxtLink to="/stream">
+          <div class="icon">
               <img src="../static/img/Ico_home.png" />
             </div>
+          </NuxtLink>
+            
             <div class="text">
               <p class="mb-0">home</p>
             </div>
-          </a>
+         
         </li>
 
         <li>
@@ -227,7 +233,7 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="left mt-0 pt-0">
-          <b-nav-item href="#" class="pt-2 pr-2">
+          <b-nav-item href="/" class="pt-2 pr-2">
             <img src="../static/img/SocialTime_Logo.png" />
           </b-nav-item>
           <b-nav-item href="#" class="ml-3">
@@ -277,7 +283,7 @@
                         <img src="../static/img/Ico_buscar.png" />
                       </button>
                     </div>
-                    <div class="col-7 pt-2  text-input">
+                    <div class="col-6 pt-1 pl-2  text-input">
                       <input type="text" placeholder="Buscar.." />
                     </div>
 
@@ -548,10 +554,9 @@ button.btn-restore {
 .cont-filter {
   background: white;
   width: 377px;
-
   position: absolute;
   right: 180px;
-  top: 91px;
+  top: 80px;
   z-index: 2;
   border-radius: 14px;
   box-shadow: 0 0 8px 0px rgb(128 128 128 / 53%);
@@ -674,11 +679,16 @@ ul.navbar-nav.left {
 ul.navbar-nav.rigth {
   margin-right: 0;
 }
+button.btn.filter {
+    position: relative;
+    left: 18px;
+}
 nav.navbar.navbar-light.bg-ligth.navbar-expand-lg {
   box-shadow: 0px 1px 10px 0px #80808036;
   border-radius: 8px;
   padding-bottom: 0;
   margin-bottom: 10px;
+  height: 66px;
 }
 p.title-icon {
   font-size: 10px;

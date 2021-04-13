@@ -1,8 +1,8 @@
 <template lang="html">
  
-     <div class="col-6 col-md-4 col-lg-2 p-0">
+     <div class="col-6 col-md-4 col-lg-2 p-0" >
+     <NuxtLink to="/stream">
      <div class="card img-user" :style="{ backgroundImage: `url('${user.photo}')` }">
-     
      <div class="row">
        <div class="col-12">
         <div class="live">LIVE</div>
@@ -20,9 +20,9 @@
         </div>
        </div>
      </div>
-     </div>
-      
-    </div>
+    
+      </div>
+    </NuxtLink>
   </div>
 </template>
 <script>

@@ -1,5 +1,12 @@
 [
   {
+    "name": "stream",
+    "path": "/stream",
+    "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\stream.vue",
+    "chunkName": "pages/stream",
+    "_name": "_3e8749b5"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\index.vue",
