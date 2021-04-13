@@ -298,20 +298,24 @@
             </div>
           </b-nav-item>
 
-          <b-nav-item href="#"
-            ><img src="../static/img/Ico_stream.png"
-          /></b-nav-item>
-          <b-nav-item class="pt-2" href="#"
-            ><img src="../static/img/ico_notificacion.png"
-          /></b-nav-item>
-          <b-nav-item href="#"
-            ><img src="../static/img/img_perfil.png"
-          /></b-nav-item>
+          <b-nav-item href="#">
+            <div class="row" style=" position: relative; top: -5px; left: -14px;">    
+                <div class="col-4">
+                      <img src="../static/img/Ico_stream.png"/>
+                </div>
+                <div class="col-3 pt-1">
+                    <img src="../static/img/ico_notificacion.png" />
+                </div>
+                <div class="col-4">
+                    <img src="../static/img/img_perfil.png" />
+                </div>
+            </div>
+            </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </div>
-</template>
+</template> 
 
 <script>
 import VueSimpleRangeSlider from "vue-simple-range-slider";
