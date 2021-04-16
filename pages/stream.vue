@@ -437,7 +437,7 @@ svg.material-design-icon__svg {
 );
 }
 .container-message-manager {
-    border: 10px #343434 solid;
+    border: 10px #343434 solid!important;
     box-shadow: 0 1px 0px 0 hsl(0deg 0% 0% / 0%)!important;
         border-radius: 23px;
             margin-top: 50px;
@@ -446,7 +446,7 @@ svg.material-design-icon__svg {
     border-radius: 0!important;
     height: 792px;
     border-bottom: solid 1px #8080801f;
-    background: #343434;
+    background: #343434!important;
 }
 .quick-chat-container .header-container .header-paticipants-text{
   display: none!important;
