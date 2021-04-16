@@ -196,7 +196,7 @@ export default {
             myself: {
                 name: 'Matheus S.',
                 id: 3,
-                profilePicture: 'img/face.png'
+                profilePicture: '/img/face.png'
             },
             messages: [
                 {
