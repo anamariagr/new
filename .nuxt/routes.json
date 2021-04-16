@@ -3,14 +3,12 @@
     "name": "stream",
     "path": "/stream",
     "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\stream.vue",
-    "chunkName": "pages/stream",
-    "_name": "_3e8749b5"
+    "chunkName": "pages/stream"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_473f99a6"
+    "chunkName": "pages/index"
   }
 ]

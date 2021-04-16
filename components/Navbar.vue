@@ -110,7 +110,7 @@
         
       </div>
       <ul>
-        <li class="mt-0">
+        <li class="mt-0 d-flex">
           
           <NuxtLink to="/stream">
           <div class="icon">
@@ -559,7 +559,7 @@ button.btn-restore {
   background: white;
   width: 377px;
   position: absolute;
-  right: 180px;
+  right: 195px;
   top: 80px;
   z-index: 2;
   border-radius: 14px;
@@ -608,6 +608,7 @@ button.btn.search:hover {
   padding: 5px 0px 5px 35px;
   cursor: pointer;
   margin-top: 10px;
+  color: #050457;
 }
 .cont-sibar li a {
   text-decoration: none;
@@ -637,6 +638,7 @@ button.btn.search:hover {
   font-weight: 500;
   text-transform: capitalize;
   font-size: 13px;
+      padding-top: 5px;
 }
 .cont-icon button.btn.btn-secondary {
   background: white;
