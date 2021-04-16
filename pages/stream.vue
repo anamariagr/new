@@ -444,8 +444,8 @@ svg.material-design-icon__svg {
 }
 .quick-chat-container {
     border-radius: 0!important;
-    height: 792px;
-    border-bottom: solid 1px #8080801f;
+    height: 792px!important;
+    border-bottom: solid 1px #8080801f;   
     background: #343434!important;
 }
 .quick-chat-container .header-container .header-paticipants-text{
