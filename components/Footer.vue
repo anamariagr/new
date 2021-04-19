@@ -12,9 +12,12 @@
 <style scoped>
 .footer {
    
-    margin: auto;
+  margin: auto;
     font-size: 13px;
-    color: grey; 
+    color: grey;
     padding-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 </style>

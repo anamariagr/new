@@ -1,5 +1,12 @@
 [
   {
+    "name": "profile",
+    "path": "/profile",
+    "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\profile.vue",
+    "chunkName": "pages/profile",
+    "_name": "_3e982bc4"
+  },
+  {
     "name": "stream",
     "path": "/stream",
     "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\stream.vue",

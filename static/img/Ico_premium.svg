@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.775" height="61.513" viewBox="0 0 61.775 61.513">
+    <defs>
+        <linearGradient id="linear-gradient" x1=".206" x2="1.299" y1=".188" y2="1.642" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ffea4e"/>
+            <stop offset="1" stop-color="#eb7f00"/>
+        </linearGradient>
+        <filter id="Trazado_298" width="61.775" height="61.513" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur" stdDeviation="3"/>
+            <feFlood flood-opacity=".302"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="Ico_premium" transform="translate(9 9)">
+        <g filter="url(#Trazado_298)" transform="translate(-9 -9)">
+            <path id="Trazado_298-2" fill="url(#linear-gradient)" d="M21.609 42.43l-2.7 4.869 5.043 2.347-.478 5.564 5.564.13 1.826 5.26L36 58.427l3.825 4.086 3.825-4.086 5.13 2.173 1.826-5.26 5.564-.13-.478-5.564 5.04-2.346-2.608-4.87 3.652-4.217-4.434-3.347 1.608-5.346-5.434-1.261-.7-5.521-5.477 1.043L44.474 19l-4.608 3.173L35.3 19l-2.869 4.782-5.477-1.043-.7 5.521-5.428 1.26 1.608 5.347L18 38.214z" transform="translate(-9 -10)"/>
+        </g>
+        <path id="Trazado_299" d="M29.132 34.268a.688.688 0 0 1 .675.676.555.555 0 0 1-.1.311L29.339 35l.1.519a.732.732 0 0 1-.311.1.676.676 0 1 1 0-1.351zm6.857 8.883l3.74-4.987L43.313 43l4.26-3.845-1.091 6.39H32.976l-1.2-6.285zm3.74-9.818a.675.675 0 1 1-.676.675.688.688 0 0 1 .676-.674zm9.971 1.456a.675.675 0 1 1 .675.675.657.657 0 0 1-.468-.208l.053-.363-.208.156a.392.392 0 0 1-.052-.26zm-20.568 2.337a2.621 2.621 0 0 0 .623-.1L31.677 47.1h16.1L49.6 36.866a2.093 2.093 0 0 0 .779.156 2.234 2.234 0 1 0-2.234-2.234 1.9 1.9 0 0 0 .468 1.3l-5.039 4.519-3.374-4.468a2.233 2.233 0 1 0-2.7-2.182 2.267 2.267 0 0 0 1.766 2.182l-3.481 4.676-4.94-4.515a2.217 2.217 0 1 0-1.713.831z" class="cls-2" transform="translate(-17.872 -18.816)"/>
+        <path id="Trazado_300" d="M47.62 47.549h-15.9a.779.779 0 1 0 0 1.558h15.847a.8.8 0 0 0 .78-.779.756.756 0 0 0-.727-.779z" class="cls-2" transform="translate(-17.814 -18.588)"/>
+    </g>
+</svg>

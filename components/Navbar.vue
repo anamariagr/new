@@ -104,7 +104,7 @@
         <NuxtLink to="/">  
          <img
           class="icon-social-sibar"
-          src="../static/img/SocialTime_Logo.png"
+          src="../static/img/SocialTime_Logo.svg"
         />
           </NuxtLink>
         
@@ -234,11 +234,11 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="left mt-0 pt-0">
           <b-nav-item href="/" class="pt-2 pr-2">
-            <img src="../static/img/SocialTime_Logo.png" />
+            <img class="icon-social" src="../static/img/SocialTime_Logo.svg" />
           </b-nav-item>
           <b-nav-item href="#" class="ml-3">
             <div>
-              <img class="icon-nav" src="../static/img/Ico_lives_act.png" />
+              <img class="icon-nav" src="../static/img/Ico_lives.svg" />
             </div>
             <div>
               <p class="title-icon">Lives</p>
@@ -246,7 +246,7 @@
           </b-nav-item>
           <b-nav-item href="#" class="ml-3">
             <div>
-              <img class="icon-nav" src="../static/img/Ico_amigos.png" />
+              <img class="icon-nav" src="../static/img/Ico_amigos.svg" />
             </div>
             <div>
               <p class="title-icon">Amigos</p>
@@ -254,7 +254,7 @@
           </b-nav-item>
           <b-nav-item href="#" class="ml-3">
             <div>
-              <img class="icon-nav" src="../static/img/Ico_chat.png" />
+              <img class="icon-nav" src="../static/img/Ico_chat.svg" />
             </div>
             <div>
               <p class="title-icon">Chat</p>
@@ -262,7 +262,7 @@
           </b-nav-item>
           <b-nav-item href="#" class="ml-3">
             <div>
-              <img class="icon-nav" src="../static/img/Ico_tienda.png" />
+              <img class="icon-nav" src="../static/img/Ico_tienda.svg" />
             </div>
             <div>
               <p class="title-icon">Tienda</p>
@@ -307,7 +307,7 @@
                     <img src="../static/img/ico_notificacion.png" />
                 </div>
                 <div class="col-4">
-                    <img src="../static/img/img_perfil.png" />
+                   <NuxtLink to="/profile"> <img src="../static/img/img_perfil.png" /></NuxtLink>
                 </div>
             </div>
             </b-nav-item>
@@ -378,6 +378,22 @@ export default {
 };
 </script>
 <style>
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+img.img-fluid.w-100.d-block {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+img.icon-social {
+    width: 155px;
+}
+img.icon-social-sibar {
+    width: 155px;
+}
+img.icon-nav {
+    width: 35px;
+}
 .btn-appication{
     background-color: #43dae6!important;
     border-radius: 12px;

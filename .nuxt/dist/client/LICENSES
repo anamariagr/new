@@ -1,7 +1,13 @@
-/**
- * vuex v3.1.1
- * (c) 2019 Evan You
- * @license MIT
+/*!
+  * vue-router v3.5.1
+  * (c) 2021 Evan You
+  * @license MIT
+  */
+
+/*!
+ * Vue.js v2.6.12
+ * (c) 2014-2020 Evan You
+ * Released under the MIT License.
  */
 
 
@@ -93,14 +99,8 @@ PERFORMANCE OF THIS SOFTWARE.
  */
 
 
-/*!
-  * vue-router v3.5.1
-  * (c) 2021 Evan You
-  * @license MIT
-  */
-
-/*!
- * Vue.js v2.6.12
- * (c) 2014-2020 Evan You
- * Released under the MIT License.
+/**
+ * vuex v3.1.1
+ * (c) 2019 Evan You
+ * @license MIT
  */

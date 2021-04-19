@@ -2,7 +2,7 @@
 
 <template>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row  streams">
       <Navbar></Navbar>
       <div class="col-12">
             <div class="row">
@@ -103,9 +103,9 @@
         fotos
       </div>
       <div class="col-lg-4 d-none d-lg-block pl-0 pr-0">
-        <img class="img-video" src="/img/meditar.png"/>
+        <img class="img-video" src="/img/sit-woman.jpg"/>
       </div>
-      <div class="col-lg-4 d-none d-lg-block pl-0 pr-0">
+      <div class="col-lg-4 d-none d-lg-block pl-0 pr-0 chat">
           <div>
       <Chat v-if="visible"
         :participants="participants"
@@ -123,7 +123,7 @@
         :display-header="true"
         :send-images="true"
         :profile-picture-config="profilePictureConfig"
-        :timestamp-config="timestampConfig"
+        
         :link-options="linkOptions"
        
         @onImageClicked="onImageClicked"
@@ -393,6 +393,9 @@ export default {
 };
 </script>
 <style>
+.streams{
+      height: fit-content;
+}
 .premium {
     width: 100px;
     position: absolute;
@@ -444,7 +447,7 @@ svg.material-design-icon__svg {
 }
 .quick-chat-container {
     border-radius: 0!important;
-    height: 792px!important;
+    height: 800px!important;
     border-bottom: solid 1px #8080801f;   
     background: #343434!important;
 }
@@ -522,11 +525,7 @@ background: linear-gradient(90deg, rgba(251,231,98,1) 18%, rgba(251,208,84,1) 52
 }
 </style>
 <style scoped> 
-.border-bottom img {
-    width: 15px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
+
 .borde-left-right{
         border-left: solid 2px #d6d6d6;
     
@@ -562,7 +561,7 @@ background: linear-gradient(90deg, rgba(251,231,98,1) 18%, rgba(251,208,84,1) 52
     font-family: sans-serif;
     text-align: justify;
     line-height: 1.3;
-            height: 597px;
+            height: 600px;
     overflow: overlay;
     padding: 27px;
     margin: -9px;
@@ -602,11 +601,11 @@ position: absolute!important;
 .chat{
         background: #343434;
     width: 100%;
-   height: 791px;
+   height: 800px;
 }
 .img-video{
   width: 100%;  
-      height: 791px;
+     height: 800px;
 }
 
 .img-photograpy img {
