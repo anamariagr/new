@@ -1,5 +1,12 @@
 [
   {
+    "name": "calendar",
+    "path": "/calendar",
+    "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\calendar.vue",
+    "chunkName": "pages/calendar",
+    "_name": "_39157333"
+  },
+  {
     "name": "profile",
     "path": "/profile",
     "component": "C:\\\\Users\\\\Equipo\\\\social\\\\pages\\\\profile.vue",

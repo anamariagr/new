@@ -8,18 +8,21 @@
             <div class="user-info pl-4 pr-5">
               <div class="row justify-content-between">
                 <div class="col-4">
-                  <p class="name">Abigaíl Fuentes<span><img src="/img/Ico_premium.svg"/></span></p>
+                  <p class="name">
+                    Abigaíl Fuentes<span
+                      ><img src="/img/Ico_premium.svg"
+                    /></span>
+                  </p>
                   <p class="city">Bogotá, Colombia</p>
-                 <div class="d-flex">
-                     <div class="circle-color mr-2"></div>
-                      <p class="state">conectada</p>
-                  
-                 </div>
+                  <div class="d-flex">
+                    <div class="circle-color mr-2"></div>
+                    <p class="state">conectada</p>
+                  </div>
                 </div>
                 <div class="col-4 text-right">
                   <p class="age"><span>29</span>Años</p>
                   <p class="distance">13km</p>
-                  <p class="check"><img src="/img/Ico_verificado.svg"/></p>
+                  <p class="check"><img src="/img/Ico_verificado.svg" /></p>
                 </div>
               </div>
             </div>
@@ -34,18 +37,18 @@
               >
                 <b-carousel-slide
                   class="img"
-                  img-src="https://picsum.photos/1024/480/?image=10"
+                  img-src="/img/pose.jpg"
                 ></b-carousel-slide>
                 <b-carousel-slide
-                  img-src="https://picsum.photos/1024/480/?image=12"
-                ></b-carousel-slide>
-                <b-carousel-slide
-                  class="img"
-                  img-src="https://picsum.photos/1024/480/?image=22"
+                  img-src="/img/table.jpg"
                 ></b-carousel-slide>
                 <b-carousel-slide
                   class="img"
-                  img-src="https://picsum.photos/1024/480/?image=23"
+                  img-src="/img/eat.jpg"
+                ></b-carousel-slide>
+                <b-carousel-slide
+                  class="img"
+                  img-src="/img/bed.jpg"
                 ></b-carousel-slide>
               </b-carousel>
             </div>
@@ -57,22 +60,22 @@
               <div class="row">
                 <div class="3">
                   <button class="btn btn-gifts">
-                      <img src="/img/Ico_img.svg"/>
+                    <img src="/img/Ico_img.svg" />
                   </button>
                 </div>
                 <div class="3">
                   <button class="btn btn-gifts">
-                      <img src="/img/Ico_stream.svg"/>
+                    <img src="/img/Ico_stream.svg" />
                   </button>
                 </div>
                 <div class="3">
                   <button class="btn btn-gifts">
-                      <img src="/img/Ico_gif.svg"/>
+                    <img src="/img/Ico_gif.svg" />
                   </button>
                 </div>
                 <div class="3">
                   <button class="btn btn-gifts pb-3">
-                      <img src="/img/Ico_opc.svg"/>
+                    <img src="/img/Ico_opc.svg" />
                   </button>
                 </div>
               </div>
@@ -84,7 +87,7 @@
                 </div>
                 <div class="col-6">
                   <button class="btn btn-premium">
-                      <img src="/img/Premium_ico.svg"/>
+                    <img src="/img/Premium_ico.svg" />
                   </button>
                 </div>
               </div>
@@ -131,35 +134,117 @@
           <p>
             Amante de los animales, de carácter tranquilo, humanista, crítica y
             reflexiva, me gusta ayudar en grupos sociales y comunidades
-            relacionadas con los animales… Más info
+            relacionadas con los animales… <span class="text-color">Más info</span>
           </p>
+          
         </div>
-        <div class="col-12">
-          Photographyes
+        <div class="col-12 p-2 pl-3">
+            <p class="photos-title">Fotos</p>
+        </div>
+        <div class="col-12 photograpys pt-0">
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="img-photograpy-media">
+                    <img class=" mt-0" src="/img/sit-woman.jpg" />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="img-photograpy-media">
+                    <img class=" mt-0" src="/img/girl-ocean.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+                 <div class="pay"><img class="coing" src="/img/Coin.svg"/></div>
+              <div class="img-photograpy">
+                <img src="/img/blur.png" />
+              </div>
+            </div>
+            <div class="col-4 pr-1">
+              <div class="img-photograpy-media">
+                <img src="/img/sit-woman.jpg" />
+              </div>
+            </div>
+            <div class="col-4 pl-1">
+              <div class="img-photograpy-media">
+                <img src="/img/eat.jpg" />
+              </div>
+            </div>
+            <div class="col-4 pl-1">
+              <div class="img-photograpy-media">
+                <img src="/img/small.jpg" />
+              </div>
+            </div>
+             <div class="col-6 pt-4">
+              <div class="row">
+                <div class="col-12">
+                  <div class="img-photograpy-media">
+                    <img class=" mt-0" src="/img/woman-umbrella.png" />
+                  </div>
+                </div>
+                <div class="col-12">
+                    <div class="pay media mb-1"><img class="coing" src="/img/Coin.svg"/></div>
+                  <div class="img-photograpy-media">
+                    <img class=" mt-0" src="/img/blur.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 pt-3">
+              <div class="img-photograpy">
+                <img src="/img/girl-ocean.png" />
+              </div>
+            </div>
+            <div class="col-4 pr-1">
+              <div class="img-photograpy-media">
+                <img src="/img/img-prueba.jpg" />
+              </div>
+            </div>
+            <div class="col-4 pl-1">
+              <div class="img-photograpy-media">
+                <img src="/img/sit-woman.jpg" />
+              </div>
+            </div>
+            <div class="col-4 pl-1">
+              <div class="img-photograpy-media">
+                <img src="/img/img-prueba.jpg" />
+              </div>
+            </div>
+             <div class="col-12 showMore mt-2 text-center">
+                      Ver más
+                    </div>
+          </div>
         </div>
       </div>
     </div>
     <Footer></Footer>
   </div>
-  
 </template>
 <script></script>
 <style>
+img.img-fluid {
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
 img.icon-stremer {
-    width: 30%;
+  width: 30%;
 }
 ul.navbar-nav.rigth {
-    position: absolute!important;
-    right: 0!important;
-    top: 3px;
+  position: absolute !important;
+  right: 0 !important;
+  top: 3px;
 }
-.circle-color{
-height: 10px;
-    width: 10px;
-    background-color: #a9ef4c;
-    border-radius: 10px;
-    margin-top: 7px;
-    border: solid white 1px;
+.circle-color {
+  height: 10px;
+  width: 10px;
+  background-color: #a9ef4c;
+  border-radius: 10px;
+  margin-top: 7px;
+  border: solid white 1px;
 }
 </style>
 <style scoped>
@@ -188,6 +273,7 @@ height: 10px;
 .img .img-fluid {
   border-radius: 21px;
 }
+
 .btn-follow {
   width: 100%;
   background: white;
@@ -245,8 +331,102 @@ button.btn-gifts {
   cursor: pointer;
 }
 img.icon-stremer {
-    padding-bottom: 6px;
-    padding-right: 6px;
+  padding-bottom: 6px;
+  padding-right: 6px;
+}
+.photograpys {
+  width: 100%;
+  padding-top: 0;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  color: #333;
+  font-family: sans-serif;
+  text-align: justify;
+  line-height: 1.3;
+  height: 600px;
+  overflow: overlay;
+  padding: 27px;
+  margin: -9px;
+  padding-bottom: 50px;
+  padding-right: 10px;
+  height: 100vh;
+}
+.photograpys::-webkit-scrollbar {
+  width: 8px;
+}
+.photograpys::-webkit-scrollbar-thumb {
+  background: #ffffff38;
+  border-radius: 4px;
+}
+.photograpys::-webkit-scrollbar-thumb:active {
+  background-color: #00c5e038;
+}
+.photograpys::-webkit-scrollbar-thumb:hover {
+  background: #00c5e038;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.photograpys::-webkit-scrollbar-track {
+  background: #ffff;
+  border-radius: 4px;
+}
+.photograpys::-webkit-scrollbar-track:hover,
+.photograpys::-webkit-scrollbar-track:active {
+  background: #ffff;
+}
+.img-photograpy img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+.img-photograpy-media img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 25px;
+  height: 100%;
+  padding: 3px;
+}
+.img-photograpy-media {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+}
+.img-photograpy img {
+    height: 400px;
+    cursor: pointer;
+}
+.img-photograpy-media img {
+  object-fit: cover;
+}
+ 
+.pay {
+        position: absolute;
+    left: 83%;
+    background: rgba(114,114,114,0.74902);
+    padding: 15px 6px 5px 6px;
+    top: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.pay.media {
+    top: 3px;
+}
+.showMore {
+     width: 99px;
+    color: #00c5e0;
+    margin: auto;
+    font-size: 16px;
+    cursor: pointer;
+    padding-top: 20px;
+}
+p.photos-title {
+    font-size: 19px;
+    font-weight: 500;
+    color: #5d5959;
+}
+span.text-color {
+    font-size: 12px;
+    color: #94d440;
+    cursor: pointer;
 }
 
 </style>

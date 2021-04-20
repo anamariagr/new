@@ -119,7 +119,7 @@
           </NuxtLink>
             
             <div class="text">
-              <p class="mb-0">home</p>
+              <a  href="/"  class="mb-0">home</a>
             </div>
          
         </li>
@@ -130,7 +130,7 @@
               <img src="../static/img/Ico_agenda.png" />
             </div>
             <div class="text">
-              <p class="mb-0">agenda</p>
+              <a  href="calendar"  class="mb-0 pl-3">agenda</a>
             </div>
           </a>
         </li>
@@ -140,7 +140,7 @@
               <img src="../static/img/Ico_verificar.png" />
             </div>
             <div class="text">
-              <p class="mb-0">verificar cuenta</p>
+              <a  href=""  class="mb-0">verificar cuenta</a>
             </div>
           </a>
         </li>
@@ -150,7 +150,7 @@
               <img src="../static/img/Ico_bloq_usu.png" />
             </div>
             <div class="text">
-              <p class="mb-0">usuarios bloqueados</p>
+              <a  href=""  class="mb-0">usuarios bloqueados</a>
             </div>
           </a>
         </li>
@@ -160,7 +160,7 @@
               <img src="../static/img/Ico_cuenta.png" />
             </div>
             <div class="text">
-              <p class="mb-0">cuenta de cobro</p>
+              <a  href=""  class="mb-0">cuenta de cobro</a>
             </div>
           </a>
         </li>
@@ -170,7 +170,7 @@
               <img src="../static/img/Ico_contacto.png" />
             </div>
             <div class="text">
-              <p class="mb-0">Contáctenos</p>
+              <a  href=""  class="mb-0">Contáctenos</a>
             </div>
           </a>
         </li>
@@ -180,7 +180,7 @@
               <img src="../static/img/Ico_term&cond.png" />
             </div>
             <div class="text">
-              <p class="mb-0">Términos y condiciones</p>
+              <a  href=""  class="mb-0">Términos y condiciones</a>
             </div>
           </a>
         </li>
@@ -190,7 +190,7 @@
               <img src="../static/img/Ico_politic.png" />
             </div>
             <div class="text">
-              <p class="mb-0">Políticas de privacidad</p>
+              <a  href=""  class="mb-0">Políticas de privacidad</a>
             </div>
           </a>
         </li>
@@ -200,7 +200,7 @@
               <img src="../static/img/Ico_preguntas_f.png" />
             </div>
             <div class="text">
-              <p class="mb-0">preguntas frecuentes</p>
+              <a  href=""  class="mb-0">preguntas frecuentes</a>
             </div>
           </a>
         </li>
@@ -210,7 +210,7 @@
               <img src="../static/img/Negocios.png" />
             </div>
             <div class="text">
-              <p class="mb-0">negocios</p>
+              <a href="" class="mb-0">negocios</a>
             </div>
           </a>
         </li>
@@ -649,7 +649,7 @@ button.btn.search:hover {
   width: 95%;
   padding: 5px 0px 5px 35px;
 }
-.cont-sibar .text p {
+.cont-sibar .text a {
   padding-left: 15px;
   font-weight: 500;
   text-transform: capitalize;

@@ -423,7 +423,7 @@ img.img-gifts {
 }
 img.icon-stremer {
     width: 30%!important;
-    height: 18px;
+    height: 30px;
 }
 span.material-design-icon.image-icon {
     display: none;
