@@ -4,6 +4,7 @@
     "pages/calendar.js": "pages/calendar.js",
     "pages/index.js": "pages/index.js",
     "pages/profile.js": "pages/profile.js",
+    "pages/store.js": "pages/store.js",
     "pages/stream.js": "pages/stream.js",
     "server.js": "server.js"
   },
@@ -11,6 +12,7 @@
     "pages/calendar.js": "pages/calendar.js.map",
     "pages/index.js": "pages/index.js.map",
     "pages/profile.js": "pages/profile.js.map",
+    "pages/store.js": "pages/store.js.map",
     "pages/stream.js": "pages/stream.js.map",
     "server.js": "server.js.map"
   }

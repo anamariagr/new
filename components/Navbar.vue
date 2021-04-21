@@ -260,11 +260,11 @@
               <p class="title-icon">Chat</p>
             </div>
           </b-nav-item>
-          <b-nav-item href="#" class="ml-3">
-            <div>
+          <b-nav-item href="/store" class="ml-3">
+            
               <img class="icon-nav" src="../static/img/Ico_tienda.svg" />
-            </div>
-            <div>
+           
+            <div> 
               <p class="title-icon">Tienda</p>
             </div>
           </b-nav-item>
